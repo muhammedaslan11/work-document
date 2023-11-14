@@ -1,0 +1,593 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      font-family: "Poppins", sans-serif;
+      font-family: "Roboto", sans-serif;
+    }
+    .contentsrow {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 90%;
+      padding: 0 5%;
+    }
+    .contentsSection,
+    .sourceSection {
+      width: 1000px;
+      max-width: 1000px;
+      text-align: center;
+      display: block;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      margin-top: 2rem;
+    }
+    .explanationSection {
+      width: 1000px;
+      max-width: 1000px;
+      text-align: left;
+      display: block;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      margin-top: 2rem;
+    }
+
+    .desc {
+      padding: 10px 2rem;
+    }
+    body {
+      display: grid;
+      place-items: center;
+    }
+  </style>
+  <body>
+    <section class="contentsSection">
+      <h1>İçindekiler</h1>
+      <a href="#yazılımnedir" class="contentsrow">
+        <p>Yazılım Nedir?</p>
+        <p>#yazılımnedir</p>
+      </a>
+      <a href="#muhendisliknedir" class="contentsrow"
+        ><p>Mühendislik Nedir</p>
+        <p>#muhendisliknedir</p></a
+      >
+      <a href="#HTMLnedir" class="contentsrow"
+        ><p>HTML nedir</p>
+        <p>#htmlnedir</p></a
+      >
+      <a href="#CSSnedir" class="contentsrow"
+        ><p>CSS nedir</p>
+        <p>#cssnedir</p></a
+      >
+      <a href="#degiskenler" class="contentsrow"
+        ><p>Değişkenler(Variables)</p>
+        <p>#degiskenler</p></a
+      >
+      <a href="#nesting" class="contentsrow"
+        ><p>İç İçe Koymak (Nesting)</p>
+        <p>#nesting</p></a
+      >
+      <a href="#kosullar" class="contentsrow"
+        ><p>Koşullar</p>
+        <p>#kosullar</p></a
+      >
+      <a href="#javascriptnedir" class="contentsrow"
+        ><p>JavaScript nedir?</p>
+        <p>#javascriptnedir</p></a
+      >
+      <a href="#javascriptnedir" class="contentsrow"
+        ><p>Tarayıcılar JavaScript Nasıl Çalışır?</p>
+        <p>#javascriptnedir</p></a
+      >
+      <a href="#javascriptnedir" class="contentsrow"
+        ><p>JavaScript nasıl çalışır?</p>
+        <p>#javascriptnedir</p></a
+      >
+      <a href="#javascriptnedir" class="contentsrow"
+        ><p>JavaScript motoru</p>
+        <p>#javascriptnedir</p></a
+      >
+      <a href="#javascriptnedir" class="contentsrow"
+        ><p>İstemci tarafı JavaScript</p>
+        <p>#javascriptnedir</p></a
+      >
+      <a href="#javascriptnedir" class="contentsrow"
+        ><p>Sunucu tarafı Javascript</p>
+        <p>#javascriptnedir</p></a
+      >
+      <a href="#javascriptnedir" class="contentsrow"
+        ><p>İstemci tarafına karşı sunucu tarafı JavaScript</p>
+        <p>#javascriptnedir</p></a
+      >
+      <a href="#domnedir" class="contentsrow"
+        ><p>DOM Nedir?</p>
+        <p>domnedir</p></a
+      >
+      <a href="#scriptnedir" class="contentsrow"
+        ><p>Script Nedir? Script Türleri Nelerdir?</p>
+        <p>#scriptnedir</p></a
+      >
+      <a href="#degiskenolusturmavetanımlama" class="contentsrow"
+        ><p>Değişken oluşturma(Declaration) ve tanımlama(initialization)</p>
+        <p>#degiskenolusturmavetanımlama</p></a
+      >
+      <a href="#varletconst" class="contentsrow"
+        ><p>Var Let Const</p>
+        <p>#varletconst</p></a
+      >
+      <a href="#scope" class="contentsrow"
+        ><p>Scope</p>
+        <p>#scope</p></a
+      >
+      <a href="#varletconst" class="contentsrow"
+        ><p>Var-Let-Const Ve Farkları</p>
+        <p>#varletconst</p></a
+      >
+      <a href="#varvslet" class="contentsrow"
+        ><p>Var Vs Let</p>
+        <p>#varvslet</p></a
+      >
+      <a href="#letvsconst" class="contentsrow"
+        ><p>Let-Const Arasındaki Farklar</p>
+        <p>#letvsconst</p></a
+      >
+      <a href="#tekrartanımlamaveguncelleme" class="contentsrow"
+        ><p>Tekrar Tanımlama Ve Güncelleme Durumu</p>
+        <p>#tekrartanımlamaveguncelleme</p></a
+      >
+      <a href="#hosting" class="contentsrow"
+        ><p>Hosting</p>
+        <p>#hosting</p></a
+      >
+      <a href="#componentnedir" class="contentsrow"
+        ><p>Component Nedir?</p>
+        <p>#componentnedir</p></a
+      >
+    </section>
+    <section class="explanationSection">
+      <div class="desc" id="yazılımnedir">
+        <h3>Yazılım Nedir?</h3>
+        <p>
+          Yazılım, temelde bilgisayara nasıl çalışacağını söyleyen komutlar ve
+          veriler bütünüdür. Bir bilgisayarın iki ana unsuru olan yazılım ve
+          donanım, fonksiyonel olabilmek için birbirine bağımlıdır. Bilgisayarın
+          fiziksel parçalarından oluşan kısım donanım iken bu parçaları yazılım
+          denilen görünmez kısım işlevsel kılar. <br />
+          Görünen Fiziksel Kısım "DONANIM";<br />
+          Görünmeyen ve işlevsel kısım "YAZILIM". <br />
+          örneğin; Beyin bir donanım iken akıl bir yazılımdır.
+        </p>
+      </div>
+      <div class="desc" id="muhendisliknedir">
+        <h3>Mühendislik Nedir?</h3>
+        <p>
+          Amerikan Mühendislerinin Mesleki Gelişim Konseyi "mühendisliği" şu
+          şekilde tanımlamıştır: <br />
+          Yapıları, makineleri, aparatları veya imalat süreçlerini veya bunları
+          tek tek veya birlikte kullanan işleri tasarlamak veya geliştirmek;
+          veya tasarımlarını tam olarak bilerek inşa etmek veya işletmek; veya
+          belirli çalışma koşulları altında davranışlarını tahmin etmek;
+          bunların tümünü amaçlanan işleve, işletme ekonomisine, can ve mal
+          güvenliğine saygı duyarak tasarlamak için bilimsel ilkelerin yaratıcı
+          uygulamasıdır.
+        </p>
+      </div>
+      <div class="desc" id="HTMLnedir">
+        <h3>HTML Nedir?</h3>
+        <p>
+          Hiper Metin İşaretleme Dili (HTML, İngilizce HyperText Markup Language
+          kelimelerinin baş harflerinin kısaltılmasıdır) web sayfalarını
+          oluşturmak için kullanılan standart metin işaretleme dilidir. Dilin
+          son sürümü HTML5'tir.
+        </p>
+      </div>
+      <div class="desc" id="CSSnedir">
+        <h3>CSS Nedir?</h3>
+        <p>
+          Cascading Style Sheets (Basamaklı Stil Şablonları ya da Basamaklı
+          Biçim Sayfaları, bilinen kısa adıyla CSS), HTML'e ek olarak metin ve
+          format biçimlendirme alanında fazladan olanaklar sunan bir işaretleme
+          dilidir.
+        </p>
+      </div>
+      <div class="desc" id="degiskenler">
+        <h3>Değişkenler(Variables)?</h3>
+        <p>
+          Basitçe, bellek içindeki bir alanın adlandırılmasına ve sizin için
+          ayrılmasına değişken tanımlamak denir. Kasaya verdiğiniz, yani bellek
+          alanına verdiğiniz ad ise değişken olarak adlandırılır. Kasa içinde
+          sakladığınız değerse veri olarak adlandırılır.
+        </p>
+      </div>
+      <div class="desc" id="nesting">
+        <h3>İç İçe Koymak & Döngüler (Nesting)</h3>
+        <p>
+          Bir döngü yapısının içine başka bir döngü yapısının yerleştirilmesiyle
+          elde edilen yapıya iç içe döngü (nested loop) adı verilir. JavaScript
+          dilinde, if deyimlerini herhangi bir derinliğe kadar iç içe kullanmak
+          nasıl mümkünse, döngü deyimlerini de iç içe kullanmak mümkün
+          olacaktır. İç içe döngülerde hatırlanacak anahtar bilgi, önce en
+          içteki döngülerin tamamlanması gerektiğidir. <br /><br />
+          <b>İç İçe Geçmiş Bloklar (Nested Blocks):</b> Programlama dilinde,
+          sıklıkla kontrol yapıları (if, for, while gibi) veya fonksiyonlar iç
+          içe geçebilir. Örneğin, bir döngü içinde başka bir döngü, bir if bloğu
+          içinde başka bir if bloğu gibi. Bu durumda, iç içe geçmiş bloklar
+          kullanılarak daha karmaşık kontrol akışları oluşturulabilir.
+          <br />
+          <br />
+          <b>İç İçe Geçmiş Veri Yapıları (Nested Data Structures):</b> Veri
+          yapıları da iç içe kullanılabilir. Örneğin, bir liste içinde başka bir
+          liste, bir sözlük içinde başka bir sözlük gibi. Bu, veri yapılarını
+          daha karmaşık ve özelleştirilmiş bir şekilde kullanmayı mümkün kılar.
+          İç içe koyma, kodun daha okunabilir ve düzenli olmasına yardımcı
+          olabilir, ancak aşırı kullanımı da karmaşıklığa neden olabilir. Bu
+          nedenle, iç içe koymayı uygun bir şekilde kullanmak, kodun anlaşılır
+          olmasını ve bakımını kolaylaştırmayı hedefler.
+        </p>
+      </div>
+      <div class="desc" id="degiskenler">
+        <h3>Koşullar</h3>
+        <p>
+          If else yapısı içerisinde koşulun sağlandığı kodlar if içerisinde yer
+          alırken, koşulun sağlanmadığı kodlar ise else içerisinde yer alır.
+        </p>
+      </div>
+      <div class="desc" id="javascriptnedir">
+        <h3>JavaScript Nedir?</h3>
+        <p>
+          JavaScript, geliştiricilerin etkileşimli web sayfaları oluşturmak için
+          kullandığı bir programlama dilidir. JavaScript işlevleri, sosyal medya
+          akışlarını yenilemekten animasyonlar ve etkileşimli haritalar
+          göstermeye kadar, bir web sitesi kullanıcısının deneyimini
+          iyileştirebilir. İstemci tarafındaki bir betik dili olarak, World Wide
+          Web'in temel teknolojilerinden biridir. Örneğin, internette gezinirken
+          bir görsel döngüsü, görmek için tıkla açılır menüsü ya da bir web
+          sayfasında dinamik olarak değişen öğe renkleri gördüğünüzde JavaScript
+          efektlerini görmüş olursunuz. <br />
+          <br />
+          <b>JavaScript ne için kullanılır?</b><br />
+          Tarihsel olarak web sayfaları bir kitaptaki sayfalara benzer şekilde
+          statikti. Statik bir sayfa bilgileri çoğunlukla sabit bir düzende
+          görüntülüyordu ve şimdi modern bir web sitesinden beklediğimiz her
+          şeyi yapmıyordu. JavaScript, web uygulamalarını daha dinamik hale
+          getirmek için tarayıcı bazlı bir teknoloji olarak ortaya çıktı.
+          Tarayıcılar JavaScript kullanarak kullanıcı etkileşimine yanıt
+          verebilir ve web sayfasındaki içerik düzenini değiştirebilir.
+          <br />Dil olgunlaştıkça JavaScript geliştiricileri kitaplıklar,
+          çerçeveler ve programlama uygulamaları oluşturdu ve bunları web
+          tarayıcılarının dışında kullanmaya başladı. Bugün JavaScript'i hem
+          istemci tarafı hem de sunucu tarafı geliştirme için kullanabilirsiniz.
+          Aşağıdaki alt bölümlerde bazı yaygın kullanım durumları sunuyoruz:
+        </p>
+        <div>
+          <p>
+            Tüm programlama dilleri, İngilizce benzeri söz dizimini işletim
+            sisteminin çalıştıracağı makine koduna çevirerek çalışır.
+            JavaScript, genel olarak bir betik dili veya yorumlanmış bir dil
+            olarak sınıflandırılır. JavaScript kodu yorumlanır, yani bir
+            JavaScript motoru tarafından doğrudan temeldeki makine dili koduna
+            çevrilir. Diğer programlama dillerinde bir derleyici tüm kodu ayrı
+            bir adımda makine kodunda derler. Bu nedenle, tüm betik dilleri
+            programlama dilleridir ancak tüm programlama dilleri betik dili
+            değildir.
+          </p>
+        </div>
+        <h3>JavaScript motoru</h3>
+        <div>
+          <p>
+            JavaScript motoru, JavaScript kodunu çalıştıran bir bilgisayar
+            programıdır. İlk JavaScript motorları yalnızca yorumlayıcılardı
+            ancak tüm modern motorlar performansı artırmak için tam zamanında
+            veya çalışma zamanı derlemesi kullanır.
+          </p>
+        </div>
+        <h3>İstemci tarafı JavaScript</h3>
+        <div>
+          <p>
+            İstemci tarafı JavaScript, JavaScript'in tarayıcınızda çalışma
+            şeklini ifade eder. Bu durumda JavaScript motoru tarayıcı kodunun
+            içindedir. Tüm büyük web tarayıcıları kendi yerleşik JavaScript
+            motorlarıyla birlikte gelir.
+          </p>
+          <p>
+            Web uygulaması geliştiricileri, fare tıklaması veya fareyle üzerine
+            gelme gibi çeşitli olaylarla ilişkili farklı işlevlerle JavaScript
+            kodu yazar. Bu işlevler HTML ve CSS'de değişiklikler yapar.
+          </p>
+          <p>
+            İstemci tarafı JavaScript'in nasıl çalıştığına dair bir genel bakış:
+          </p>
+          <p>
+            1.&nbsp;&nbsp;&nbsp;Tarayıcı, ziyaret ettiğinizde bir web sayfası
+            yükler.
+          </p>
+          <p>
+            2.&nbsp;&nbsp;&nbsp;Yükleme sırasında tarayıcı, sayfayı ve düğmeler,
+            etiketler ve açılır kutular gibi tüm öğelerini Belge Nesne Modeli
+            (DOM) adı verilen bir veri yapısına dönüştürür.
+          </p>
+          <p>
+            3.&nbsp;&nbsp;&nbsp;Tarayıcının JavaScript motoru, JavaScript kodunu
+            bayt koduna dönüştürür. Bu kod, JavaScript söz dizimi ile makine
+            arasında bir aracıdır.
+          </p>
+          <p>
+            4.&nbsp;&nbsp;&nbsp;Bir düğmeye fare tıklaması gibi farklı olaylar,
+            ilişkili JavaScript kod blogunun yürütülmesini tetikler. Motor daha
+            sonra bayt kodunu yorumlar ve DOM'da değişiklikler yapar.
+          </p>
+          <p>5.&nbsp;&nbsp;&nbsp;Tarayıcı yeni DOM'u görüntüler.</p>
+          <h3>Sunucu tarafı Javascript</h3>
+
+          <p>
+            Sunucu tarafı JavaScript, arka uç sunucu mantığında kodlama dilinin
+            kullanımını ifade eder. Bu durumda JavaScript motoru doğrudan
+            sunucuya oturur. Sunucu tarafı JavaScript işlevi veri tabanına
+            erişebilir, farklı mantıksal işlemler gerçekleştirebilir ve
+            sunucunun işletim sistemi tarafından tetiklenen çeşitli olaylara
+            yanıt verebilir. Sunucu tarafı komut dosyası oluşturmanın birincil
+            avantajı, web sitesi yanıtını gereksinimlerinize, erişim haklarınıza
+            ve web sitesinden gelen bilgi isteklerine göre büyük ölçüde
+            özelleştirebilmenizdir.
+          </p>
+
+          <h3>İstemci tarafına karşı sunucu tarafı</h3>
+
+          <p>
+            Dinamik kelimesi hem istemci tarafı hem de sunucu tarafı
+            JavaScript'i tanımlar. Dinamik davranış, gerektiğinde yeni içerik
+            oluşturmak için web sayfası görüntüsünü güncelleme yeteneğidir.
+            İstemci tarafı ve sunucu tarafı JavaScript arasındaki fark, yeni
+            içerik oluşturma biçiminde yatmaktadır. Sunucu tarafı kodu uygulama
+            mantığını kullanarak ve veri tabanındaki verileri değiştirerek
+            dinamik olarak yeni içerik oluşturur. İstemci tarafı JavaScript ise,
+            kullanıcı arayüzü mantığını kullanarak ve zaten istemcide bulunan
+            web sayfası içeriğini değiştirerek tarayıcı içinde dinamik olarak
+            yeni içerik oluşturur. İki bağlamda anlam biraz farklıdır ancak
+            ilişkilidir ve her iki yaklaşım da kullanıcı deneyimini geliştirmek
+            için birlikte çalışır.
+          </p>
+          <p>
+            Dinamik özelliklerdeki uygulama dışında, iki JavaScript kullanımı
+            arasındaki diğer bir fark, kodun erişebileceği kaynaklardır. İstemci
+            tarafında tarayıcı JavaScript'in çalışma zamanı ortamını kontrol
+            eder. Kod, yalnızca tarayıcının erişmesine izin verdiği kaynaklara
+            erişebilir. Örneğin, siz bir indirme düğmesine tıklamadığınız sürece
+            sabit diskinize içerik yazamaz. Öte yandan, sunucu tarafı işlevleri,
+            gerektiğinde sunucu makinesinin tüm kaynaklarına erişebilir.
+          </p>
+          <p>
+            JavaScript Brendan Eich tarafından 1995 yılında Netscape’de
+            geliştirildi. İlk önce Mocha adı verildi. Daha sonra LiveScript ve
+            en son JavaScript adını aldı. Netscape Navigator 2 ile hayatımıza
+            girmiş oldu. 1996 yılından itibaren tarayıcılarda görülmeye başladı.
+          </p>
+        </div>
+      </div>
+      <div class="desc" id="domnedir">
+        <h3>DOM Nedir?</h3>
+        <p>
+          DOM, HTML ve XML yapıdaki belgelerin hiyerarşik yapısını gösteren bir
+          kılavuzdur. “Document Object Model” kelimelerinin baş harfleriyle
+          oluşan DOM, Türkçe olarak “Belge Nesne Modeli” olarak ifade edilir. Bu
+          model, yazılım dillerinin belgelere erişmesini ve değişiklik yapmasını
+          sağlayan bir arabirimdir. <br /><br />
+          <b>DOM Nedir?</b><br />
+          DOM, belgenin içeriğini belirli bir düzen içerisinde nesne olarak
+          temsil edilmesini sağlayan bir modeldir. Bu modelde belge yapısında
+          bulunan her bir nesne için bir düğüm bulunur. Alt düğümler kök bir
+          düğüme bağlanır. Belge ile iletişim kuran servis düğümü çözerek
+          işlemlerini gerçekleştirir. Örneğin, bir WEB API servisi, XML dosyadan
+          veri çekerken bu modele göre belgeye erişir. İnternet tarayıcısı bir
+          web sayfasını açarken sunucuya ilk isteği gönderir ve sayfaya ait
+          belge yükler. Belgedeki nesneleri düğümlerden çözerek hiyerarşiye göre
+          sayfa içerisine yerleştirir ve site açılmış olur. Web sayfasına
+          dışardan erişim sağlayan tüm servisler bu şekilde kolaylıkla belgenin
+          mantıksal yapısına ulaşır ve sayfada değişiklik yapabilir.
+        </p>
+      </div>
+      <div class="desc" id="scriptnedir">
+        <h3>Script Nedir? Script Türleri Nelerdir?</h3>
+        <p>
+          <b>Script</b>, herhangi bir yazılım dilinde yazılmış, uygulama
+          bölümlerinin tamamını içeren hazır kodlardan oluşan bir kod bloğunu
+          ifade eder.
+          <br />
+          Kod yazmak uzun, yorucu ve karmaşık çözümlerin olduğu bir iştir. Böyle
+          durumlarda yazılımcılar çözümlerinin bazı bölümlerinde daha önceden
+          yazılmış olan kod bloklarını yani scriptleri kullanırlar.
+          <br />
+          <b>Script Türleri Nelerdir?</b> <br />Scriptlerin birçok farklı türü
+          mevcut. Sunucu ve istemci taraflı olarak iki farklı türe ayrılır.
+          Perl, Python, PHP sunucu taraflı dillere örnek verilebilir. İstemci
+          tarafı betik dillerinin bazı yaygın örnekleri Javascript,
+          VBScript(Visual Basic Script) vb.'dir.
+        </p>
+      </div>
+      <div class="desc" id="degiskenolusturmavetanımlama">
+        <h3>Değişken oluşturma(Declaration) ve tanımlama(initialization)</h3>
+        <p>
+          var ile bir değişken oluşturduğumuzda ve herhangi bir değer
+          atamadığımızda, oluşturulan değişkenin değerine default olarak
+          undefined atanır. Oluşturduğumuz bu değişkeni console.log ile
+          çağırdığımızda undefined çıktısını alırız.
+          <br /><b> Variable Declaration </b> <br />Değer atamadan sadece
+          değişken oluşturma işlemine Variable Declaration denilmektedir.
+          <img
+            src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*2ESL_YpwnlaHYqKT8s6y7w.png"
+            alt=""
+          />
+          <br />
+          Değişkene herhangi bir değer atayıp console.log() ile çağırdığımızda
+          değişkenin değerini bize döndürür. <br />
+          <b>Variable Initialization</b> <br />
+          Bir değişkene ilk değeri atama işlemine Variable Initialization
+          denmektedir.
+          <img
+            src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*taPw3izm8I6PkFG1-AxcSQ.png"
+            alt=""
+          />
+        </p>
+      </div>
+    </section>
+    <section class="sourceSection">
+      <h1>Kaynakça</h1>
+      <div class="contentsrow">
+        <p>Yazılım Nedir?</p>
+        <a
+          target="_blank"
+          href="https://www.ideasoft.com.tr/yazilim-nedir/#:~:text=Yaz%C4%B1l%C4%B1m%2C%20temelde%20bilgisayara%20nas%C4%B1l%20%C3%A7al%C4%B1%C5%9Faca%C4%9F%C4%B1n%C4%B1,denilen%20g%C3%B6r%C3%BCnmez%20k%C4%B1s%C4%B1m%20i%C5%9Flevsel%20k%C4%B1lar."
+          >kaynak linki</a
+        >
+      </div>
+      <div class="contentsrow">
+        <p>Mühendislik Nedir?</p>
+        <a target="_blank" href="https://tr.wikipedia.org/wiki/M%C3%BChendislik"
+          >kaynak linki</a
+        >
+      </div>
+      <div class="contentsrow">
+        <p>HTML Nedir?</p>
+        <a target="_blank" href="https://tr.wikipedia.org/wiki/HTML"
+          >kaynak linki</a
+        >
+      </div>
+      <div class="contentsrow">
+        <p>CSS Nedir?</p>
+        <a target="_blank" href="https://tr.wikipedia.org/wiki/CSS"
+          >kaynak linki</a
+        >
+      </div>
+      <div class="contentsrow">
+        <p>Değişkenler(Variables)?</p>
+        <a
+          target="_blank"
+          href="https://uzmanimakademi.net/javascript/javascript-degiskenler#:~:text=Herhangi%20bir%20programlama%20dilinde%20de%C4%9Fi%C5%9Fkenler,Veriler%20bilgisayar%C4%B1n%20belle%C4%9Finde%20saklan%C4%B1r."
+          >kaynak linki</a
+        >
+      </div>
+      <div class="contentsrow">
+        <p>Değişkenler(Variables)?</p>
+        <a
+          target="_blank"
+          href="https://uzmanimakademi.net/javascript/javascript-degiskenler#:~:text=Herhangi%20bir%20programlama%20dilinde%20de%C4%9Fi%C5%9Fkenler,Veriler%20bilgisayar%C4%B1n%20belle%C4%9Finde%20saklan%C4%B1r."
+          >kaynak linki</a
+        >
+      </div>
+      <div class="contentsrow">
+        <p>İç İçe Koymak & Döngüler (Nesting)</p>
+        <a
+          target="_blank"
+          href="https://gelecegiyazanlar.turkcell.com.tr/konu/egitim/301-javascript/ic-ice-donguler#:~:text=Bir%20d%C3%B6ng%C3%BC%20yap%C4%B1s%C4%B1n%C4%B1n%20i%C3%A7ine%20ba%C5%9Fka,i%C3%A7%20i%C3%A7e%20kullanmak%20m%C3%BCmk%C3%BCn%20olacakt%C4%B1r."
+          >kaynak linki</a
+        >
+      </div>
+      <div class="contentsrow">
+        <p>Koşullar</p>
+        <a
+          target="_blank"
+          href="https://academy.patika.dev/courses/javascript/kosul-yapisi-kullanimi-if-else"
+          >kaynak linki</a
+        >
+      </div>
+      <div class="contentsrow">
+        <p>JavaScript Nedir?</p>
+        <a target="_blank" href="https://aws.amazon.com/tr/what-is/javascript/"
+          >kaynak linki</a
+        >
+      </div>
+      <div class="contentsrow">
+        <p>DOM Nedir?</p>
+        <a
+          target="_blank"
+          href="https://www.hosting.com.tr/bilgi-bankasi/dom-document-object-model/"
+          >kaynak linki</a
+        >
+      </div>
+      <div class="contentsrow">
+        <p>Script Nedir? Script Türleri Nelerdir?</p>
+        <a target="_blank" href="https://coderspace.io/sozluk/script"
+          >kaynak linki</a
+        >
+      </div>
+      <div class="contentsrow">
+        <p>Var Let Const</p>
+        <a
+          target="_blank"
+          href="https://medium.com/kodcular/javascriptte-var-let-const-nedir-aralar%C4%B1nda-ki-farklar-nelerdir-3b1f6c9e23cd"
+          >kaynak linki</a
+        >
+      </div>
+      <div class="contentsrow">
+        <p>Scope</p>
+        <a
+          target="_blank"
+          href="https://medium.com/kodcular/javascriptte-var-let-const-nedir-aralar%C4%B1nda-ki-farklar-nelerdir-3b1f6c9e23cd"
+          >kaynak linki</a
+        >
+      </div>
+      <div class="contentsrow">
+        <p>Var-Let-Const Ve Farkları</p>
+        <a
+          target="_blank"
+          href="https://medium.com/kodcular/javascriptte-var-let-const-nedir-aralar%C4%B1nda-ki-farklar-nelerdir-3b1f6c9e23cd"
+          >kaynak linki</a
+        >
+      </div>
+      <div class="contentsrow">
+        <p>Var Vs Let</p>
+        <a
+          target="_blank"
+          href="https://medium.com/kodcular/javascriptte-var-let-const-nedir-aralar%C4%B1nda-ki-farklar-nelerdir-3b1f6c9e23cd"
+          >kaynak linki</a
+        >
+      </div>
+      <div class="contentsrow">
+        <p>Tekrar Tanımlama Ve Güncelleme Durumu</p>
+        <a
+          target="_blank"
+          href="https://medium.com/kodcular/javascriptte-var-let-const-nedir-aralar%C4%B1nda-ki-farklar-nelerdir-3b1f6c9e23cd"
+          >kaynak linki</a
+        >
+      </div>
+      <div class="contentsrow">
+        <p>Hosting</p>
+        <a
+          target="_blank"
+          href="https://medium.com/kodcular/javascriptte-var-let-const-nedir-aralar%C4%B1nda-ki-farklar-nelerdir-3b1f6c9e23cd"
+          >kaynak linki</a
+        >
+      </div>
+      <div class="contentsrow">
+        <p>Let-Const Arasındaki Farklar</p>
+        <a
+          target="_blank"
+          href="https://medium.com/kodcular/javascriptte-var-let-const-nedir-aralar%C4%B1nda-ki-farklar-nelerdir-3b1f6c9e23cd"
+          >kaynak linki</a
+        >
+      </div>
+      <div class="contentsrow">
+        <p>Component Nedir?</p>
+        <a
+          target="_blank"
+          href="https://medium.com/kodcular/javascriptte-var-let-const-nedir-aralar%C4%B1nda-ki-farklar-nelerdir-3b1f6c9e23cd"
+          >kaynak linki</a
+        >
+      </div>
+    </section>
+    <script>
+      var desc = document.getElementsByClassName("desc");
+      for (let i = 0; i < desc.length - 1; i++) {
+        desc[i].innerHTML += "<hr />";
+      }
+    </script>
+  </body>
+</html>
