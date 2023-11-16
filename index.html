@@ -39,13 +39,27 @@
       box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       margin-top: 2rem;
     }
-
+    .footer {
+      width: 1000px;
+      max-width: 1000px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      margin-top: 2rem;
+      text-align: center;
+    }
     .desc {
       padding: 10px 2rem;
     }
     body {
       display: grid;
       place-items: center;
+    }
+    picture {
+      max-width: 700px;
+      overflow: hidden;
+    }
+    picture img {
+      width: 100%;
+      margin: 1rem 0;
     }
   </style>
   <body>
@@ -131,13 +145,13 @@
         ><p>Var-Let-Const Ve Farkları</p>
         <p>#varletconst</p></a
       >
-      <a href="#varvslet" class="contentsrow"
+      <a href="#varletconst" class="contentsrow"
         ><p>Var Vs Let</p>
-        <p>#varvslet</p></a
+        <p>#varletconst</p></a
       >
-      <a href="#letvsconst" class="contentsrow"
+      <a href="#varletconst" class="contentsrow"
         ><p>Let-Const Arasındaki Farklar</p>
-        <p>#letvsconst</p></a
+        <p>#varletconst</p></a
       >
       <a href="#tekrartanımlamaveguncelleme" class="contentsrow"
         ><p>Tekrar Tanımlama Ve Güncelleme Durumu</p>
@@ -148,7 +162,7 @@
         <p>#hosting</p></a
       >
       <a href="#componentnedir" class="contentsrow"
-        ><p>Component Nedir?</p>
+        ><p>Component(Bileşen) Nedir?</p>
         <p>#componentnedir</p></a
       >
     </section>
@@ -437,6 +451,186 @@
           />
         </p>
       </div>
+
+      <div class="desc" id="scope">
+        <h3>Scope</h3>
+        <p>
+          Scope Scope uygulamamızda ki değişkenlerin ve fonksiyonların nerelerde
+          erişilebilir, nerelerde erişilemez olduklarını belirler. <br />
+          <b> Global Scope</b> <br />
+          Global Scope özellikli değişkenler, fonksiyon içerisinden de
+          erişilebilir durumdadırlar. <br />
+          <img
+            src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*8YyjS72bSIGmLog95Dyf3Q.png"
+            alt=""
+          />
+        </p>
+        <b>Function Scope</b> <br />
+        Eğer var ile tanımlanan bir değişken, bir fonksiyon içerisinde
+        oluşturulmuş ise, sadece o ve nested dediğimiz fonksiyon içerisinde
+        bulunan diğer fonksiyonlar içerisinde çağırılıp kullanılabilir.
+        <br />
+        <picture>
+          <img
+            src="https://miro.medium.com/v2/resize:fit:720/format:webp/1*wB7IgiJuI6mxuuTm52B_5A.png"
+            alt=""
+          />
+        </picture>
+
+        <br />
+
+        Yukarıda ki işlemde oluşturduğumuz albumDate değişkenine fonksiyonun
+        dışarısında erişmeye çalıştık. albumDate değişkenimiz, getAlbumDate adlı
+        fonksiyonumuz içerisinde tanımlandığı için, sadece o fonksiyon ve o
+        fonksiyonun içerisinde yer alan diğer fonksiyonlar içerisinden
+        erişilebilir durumdadır. Fonksiyon dışında çağırmaya çalışırsak hata
+        alırız.
+
+        <br />
+        <picture>
+          <img
+            src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*uGHUIDZLMDmwKZ6CBI4iSw.png"
+            alt=""
+          />
+        </picture>
+
+        Görmüş olduğunuz gibi getAlbumDate adlı fonksiyonumuz içerisinde
+        tanımlamış olduğumuz albumDate değişkenini, getAlbumDate fonksiyonu
+        içerisinde bulunan modifyAlbumDate fonksiyonu içerisinde de
+        kullanabiliyoruz. toDateString() bize daha okunaklı bir tarih formatı
+        sunar. <br />
+
+        Şimdi başka bir örnek ile detaylandıralım. Örneğin bir restoran
+        düşünelim. Bu restorandaki yemeklerin fiyatları artırılmak isteniyor.
+        <br />
+
+        İlk olarak, yemeklerin fiyatlarını bir array’e atalım. Bir de eklenecek
+        olan değeri belirleyelim. Yeni yemek fiyatlarını hesaplayacak fonksiyonu
+        yazalım.
+        <picture>
+          <img
+            src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*YwraCOKFeFzysf2VMNFC_w.png"
+            alt=""
+          />
+        </picture>
+        <br />
+        for döngüsüne baktığımızda, tanımlanan değişkenleri scope dışarısında da
+        kullanabildiğimizi görürüz çünkü var ile tanımlanan değişkenler function
+        scope özelliği taşımaktadır.
+        <picture>
+          <img
+            src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*Tp05MXfupcKK2LMRUYIqAA.png"
+            alt=""
+          />
+        </picture>
+      </div>
+      <div class="desc" id="varletconst">
+        <h3>Var Let Const</h3>
+        <p>
+          <b>var vs let</b> <br />
+          İlk olarak, var ve let’i karşılaştıralım. var ve let arasında ki fark,
+          var function scope özelliği taşırken, let block scope özelliği
+          taşımaktadır. Yani let ile oluşturulan bir değişken sadece
+          oluşturulduğu yerdeki süslü parantezler içerisinde erişilebilirdir ve
+          dışarısında kullanılamaz.
+          <br />
+          Bir önceki fonksiyonumuza tekrar bakalım. <br />
+          <picture>
+            <img
+              src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*sBpa8gLO7em31_h-oTqoig.png"
+              alt=""
+            />
+          </picture>
+          <br />
+          Burada for döngüsünde var keyword’ünü kullanarak değişkenlerimizi
+          oluşturduk. Bu yüzden for döngüsü dışında da erişebilmekteyiz. Tekrar
+          hatırlayacak olursak, var keyword’ü ile oluşturulan değişkenler
+          function scope özelliklidir. Yani fonksiyon içerisinde oluşturulan
+          değişkenler o fonksiyon içerisinde herhangi bir yerden erişilebilir.
+          Peki var yerine let yazarsak ne olur?
+          <br />
+          <picture>
+            <img
+              src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*0K_skgCPyZuo-eMREhMFCA.png"
+              alt=""
+            />
+          </picture>
+          ReferenceError: i is not defined hatası alırız. Bunu almamızın sebebi
+          let keyword’ü block scope özellikli olmasıdır. let keyword’ü ile
+          oluşturulan bir değişkeni, oluşturulduğu süslü parantezler dışarısında
+          çağırmaya çalışırsak hata alırız.
+        </p>
+      </div>
+      <div class="desc" id="tekrartanımlamaveguncelleme">
+        <h3>Tekrar Tanımlama Ve Güncelleme Durumu</h3>
+        <p>
+          var keyword’ü ile değişkenler tekrar tanımlanabilir ve değerleri
+          güncellenebilir.
+          <br />
+          <picture>
+            <img
+              src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*7GN6Cvy7mUmYhVD80f4syg.png"
+              alt=""
+            />
+          </picture>
+          <br />veya şu şekilde kullanabiliriz <br />
+          <picture>
+            <img
+              src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*i2ioP_ne2AeK2e1v8lj5Hg.png"
+              alt=""
+            />
+          </picture>
+          <br />
+          let ile tanımlanan bir değişkeni tekrar tanımlayamayız ancak değerini
+          güncelleyebiliriz. <br />
+          <picture>
+            <img
+              src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*4lWeFL4qaFN3hYhlJgAkSA.png"
+              alt=""
+            />
+          </picture>
+          <br />
+          Şu şekilde tekrar tanımlama durumunda hata alırız.
+          <br />
+          <picture>
+            <img
+              src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*_pARTwqlUS1ARG7-irx3dg.png"
+              alt=""
+            />
+          </picture>
+        </p>
+      </div>
+      <div class="desc" id="hosting">
+        <h3>Hosting</h3>
+        <p>
+          Hosting veya Barındırma, bir web sitesinde yayınlanmak istenen
+          sayfaların, resimlerin veya dokümanların internet kullanıcıları
+          tarafından erişebileceği bir sunucu tutulmasıdır. Barındırma hizmeti
+          web sitesinde bulundurulmak istenen içeriğin yüklendiği sunucunun veri
+          depolamasıdır. Sunucu üzerinden direkt olarak dosya gönderip almak
+          yayınlamak için birçok Control paneli kullanılmaktadır örneğin gibi
+          paneller ile Web sitenin içerikleri sunucuya kaydedilebilir. <br />
+          <br />
+          İnternette site yayınlamak için özel olarak üretilmiş, internet
+          omurgasına çok hızlı bağlantısı olan, yüzlerce kullanıcıya aynı anda
+          hizmet verebilecek bir bilgisayarda (sunucuda) yayınlamak istediği
+          dosyaların saklanması gerekir. Web siteye ait dosyaları saklayan ve
+          internet kullanıcılarının erişimine sunan bu bilgisayarlara web
+          sunucusu (web server), bu veri saklama ve yayınlama işlemine de
+          barındırma hizmeti HOSTİNG denir.
+        </p>
+      </div>
+      <div class="desc" id="componentnedir">
+        <h3>Component(Bileşen) Nedir?</h3>
+        <p>
+          “Bileşen” terimi, yazılım geliştirmede kullanılan bir terimdir ve
+          genellikle bağımsız, yeniden kullanılabilir ve özelleştirilebilir
+          birimleri ifade eder. Bileşenler, belirli bir işlevi gerçekleştiren ve
+          diğer bileşenlerle etkileşimde bulunabilen özgün yapı taşlarıdır.
+          Bileşenler, yazılımın daha modüler, yönetilebilir ve ölçeklenebilir
+          olmasını sağlamak amacıyla kullanılır.
+        </p>
+      </div>
     </section>
     <section class="sourceSection">
       <h1>Kaynakça</h1>
@@ -570,7 +764,7 @@
         <p>Let-Const Arasındaki Farklar</p>
         <a
           target="_blank"
-          href="https://medium.com/kodcular/javascriptte-var-let-const-nedir-aralar%C4%B1nda-ki-farklar-nelerdir-3b1f6c9e23cd"
+          href="https://tr.wikipedia.org/wiki/Bar%C4%B1nd%C4%B1rma_hizmeti"
           >kaynak linki</a
         >
       </div>
@@ -578,11 +772,19 @@
         <p>Component Nedir?</p>
         <a
           target="_blank"
-          href="https://medium.com/kodcular/javascriptte-var-let-const-nedir-aralar%C4%B1nda-ki-farklar-nelerdir-3b1f6c9e23cd"
+          href="https://medium.com/@yetkinkrsngr/component-nedir-bile%C5%9Fen-e38c03f03199"
           >kaynak linki</a
         >
       </div>
     </section>
+    <footer class="footer">
+      <p>
+        Made With ❤ By
+        <a href="https://muhammed-aslan11.vercel.app/" target="_blank"
+          >Muhammed Aslan</a
+        >
+      </p>
+    </footer>
     <script>
       var desc = document.getElementsByClassName("desc");
       for (let i = 0; i < desc.length - 1; i++) {
